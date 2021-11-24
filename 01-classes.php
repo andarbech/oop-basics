@@ -8,11 +8,24 @@
 // To create classes we use reserved word class.
 class Mobile
 {
+    public $name;
+    public $description;
+    public $price;
+
+    public function characteristics($name, $description, $price)
+    {
+        $this->name = $name;
+        $this->description = $description;
+        $this->price = $price;
+    }
 }
 
 // We can instantitate classes like this
-$modernMobile = new Mobile();
-$oldMobile = new Mobile();
+$modernMobile = new Mobile($name, $description, $price);
+$oldMobile = new Mobile($name, $description, $price);
+
+$modernMobile->characteristics("apple", "expensive", "1200");
+$oldMobile->characteristics("Nokia", "cheap", "50");
 
 // we can use var_dump so we can visualize our new class objects
 
